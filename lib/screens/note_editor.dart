@@ -30,7 +30,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
     String formattedDate = DateTimeHelper.formatDate(currentDate);
 
     return Scaffold(
-        backgroundColor: AppStyle.bgColor2,
+        backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: AppStyle.cardColor[Color_id],
           elevation: 0,

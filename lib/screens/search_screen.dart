@@ -17,7 +17,7 @@ class Search_screen extends StatefulWidget {
 
 class _Search_screenState extends State<Search_screen> {
   final TextEditingController _searchController = TextEditingController();
-   String searchQuery = '';
+  String searchQuery = '';
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _Search_screenState extends State<Search_screen> {
     }
 
     return Scaffold(
-      backgroundColor: AppStyle.bgColor2,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         leading: Navigator.canPop(context)
             ? IconButton(
@@ -39,13 +39,14 @@ class _Search_screenState extends State<Search_screen> {
                 highlightColor: Colors.transparent,
                 icon: const Icon(
                   Icons.arrow_back,
+                  color: Colors.white,
                 ),
                 onPressed: () => Navigator.of(context).pop(),
               )
             : null,
         leadingWidth: 30,
         elevation: 0,
-        backgroundColor: AppStyle.bgColor2,
+        backgroundColor: Colors.black,
         title: Container(
           height: 40,
           alignment: Alignment.centerLeft,

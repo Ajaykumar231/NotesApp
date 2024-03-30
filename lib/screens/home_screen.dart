@@ -26,21 +26,21 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppStyle.bgColor2,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
         title: Text(
           "Note'z",
           style: GoogleFonts.poppins(
-              color: AppStyle.maincolor,
+              color: Color(0xFF6153CD),
               fontWeight: FontWeight.w600,
               fontSize: 30),
         ),
-        backgroundColor: AppStyle.bgColor2,
+        backgroundColor: Colors.black,
       ),
       body: LiquidPullToRefresh(
-        backgroundColor: AppStyle.maincolor,
-        color: AppStyle.bgColor2,
+        backgroundColor: Color(0xFF6153CD),
+        color: Colors.black,
         onRefresh: () async {
           // Reload data from Firestore
           try {
@@ -112,8 +112,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     }
                     if (snapshot.hasData) {
                       return GridView(
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2),
                         children: snapshot.data!.docs
                             .map((note) => noteCard(
                                 context,
@@ -144,10 +145,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: AppStyle.maincolor,
+        backgroundColor: Color(0xFF6153CD),
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const NoteEditorScreen()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const NoteEditorScreen()));
         },
         child: const Icon(
           Icons.add,
